@@ -20,13 +20,13 @@ wiki = WikipediaQueryRun(api_wrapper=api_wrapper)
 # Tools list
 tools = [wiki]
 
-# Initialize LLM model
-# llm = ChatGroq(
-#     api_key=groq_api_key,
-#     model_name="llama-3.1-8b-instant",
-#     temperature=0.7,
-# )
-llm=ChatOllama(model="llama2")
+#Initialize LLM model
+llm = ChatGroq(
+    api_key=groq_api_key,
+    model_name="llama3-70b-8192",
+    temperature=0.7,
+)
+##llm=ChatOllama(model="llama2")
 
 # Initialize prompt
 prompt = hub.pull("hwchase17/openai-functions-agent")
